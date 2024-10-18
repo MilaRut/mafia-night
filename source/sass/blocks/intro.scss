@@ -1,0 +1,94 @@
+.intro {
+  background-origin: content-box;
+  margin: 0 auto;
+  margin-top: -28px;
+  padding: 50px 0 0;
+  overflow: hidden;
+
+  @include vp-1199 {
+    padding: 84px 0 0;
+  }
+
+  .container {
+    position: relative;
+    display: flex;
+    background: url("../../img/intro-bg.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 0;
+    background-size: cover;
+  }
+}
+
+.intro__titles {
+  width: 100%;
+  max-width: 1220px;
+  margin: 0 auto 74px;
+
+  @include vp-1199 {
+    max-width: 981px;
+    margin: 0 auto 124px;
+  }
+}
+
+.intro__image-mafia {
+  min-width: 562px;
+  width: 562px;
+  height: 518px;
+
+  @include vp-1199 {
+    min-width: 482px;
+    width: 482px;
+    height: 444px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.intro__image-bypocket {
+  min-width: 349px;
+  width: 349px;
+  height: 66px;
+  margin-top: -30px;
+  margin-left: 30px;
+
+  @include vp-1199 {
+    min-width: 299px;
+    width: 299px;
+    height: 56px;
+    margin-top: -23px;
+    margin-left: 25px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}
+
+.intro__image {
+  position: absolute;
+  bottom: -50px;
+  left: 47.4%;
+  width: 1090px;
+  height: 823px;
+  pointer-events: none;
+
+  @include vp-1199 {
+    bottom: -8px;
+    left: 48.1%;
+    width: 1006px;
+    height: 772px;
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+}

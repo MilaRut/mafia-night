@@ -11,6 +11,8 @@ const copyImages = () =>
 const copy = () =>
   gulp.src([
     'source/**.html',
+    'source/**.ico',
+    'source/**.webmanifest',
     'source/fonts/**',
     'source/img/**',
     'source/favicon/**'

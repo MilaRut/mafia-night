@@ -1,0 +1,80 @@
+.dress-code {
+  background-color: $color-black-russian3;
+  padding: 120px 0;
+
+  .container {
+    max-width: 1240px;
+  }
+}
+
+.dress-code__title {
+  margin-bottom: 40px;
+}
+
+.dress-code__description {
+  @include font-settings ($ff-nun, 400, 22px, 1.4);
+  margin-bottom: 128px;
+  color: $color-solitude;
+  letter-spacing: -1.3px;
+
+  &:last-of-type {
+    margin-bottom: 0;
+  }
+}
+
+.dress-code__list {
+  display: flex;
+  flex-direction: column;
+  gap: 70px;
+  margin-bottom: 100px;
+}
+
+.dress-code__item {
+  position: relative;
+  border: 2px solid #465989;
+  border-radius: 30px;
+  width: 100%;
+  max-width: 964px;
+  height: 392px;
+  padding: 58px;
+  display: flex;
+  align-items: center;
+
+  &--women {
+    margin-left: auto;
+
+    .dress-code__image {
+      right: 0;
+    }
+  }
+
+  &--men {
+    justify-content: flex-end;
+
+    .dress-code__image {
+      left: 0;
+    }
+  }
+}
+
+.dress-code__image {
+  position: absolute;
+  bottom: 0;
+}
+
+.dress-code__text {
+  max-width: 52.7%;
+}
+
+.dress-code__item-title {
+  @include font-settings ($ff-nun, 700, 26px, 1.2);
+  color: $color-alice-blue;
+  letter-spacing: -1.8px;
+  margin-bottom: 20px;
+}
+
+.dress-code__item-text {
+  @include font-settings ($ff-nun, 400, 20px, 1.4);
+  color: $color-solitude2;
+  letter-spacing: -1.2px;
+}

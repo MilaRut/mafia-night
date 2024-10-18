@@ -1,22 +1,22 @@
 .btn {
-  display: inline-flex;
-  padding: 10px 20px;
-
+  @include font-settings ($ff-mon, 700, 16px, 1);
+  letter-spacing: 0.07em;
+  text-transform: uppercase;
+  background: linear-gradient(38deg, #0047ff 0%, #c100ae 100%);
   color: $color-default-white;
-
-  background-color: $color-neon-blue;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 226px;
+  height: 60px;
+  border-radius: 12px;
   border: none;
+  padding: 0;
   cursor: pointer;
-
   transition: opacity $trans-default;
-
-  &--red {
-    background-color: $color-torch-red;
-  }
 
   &:disabled {
     opacity: 0.5;
-
     pointer-events: none;
   }
 

@@ -1,0 +1,71 @@
+.overview {
+  padding-top: 116px;
+  padding-bottom: 162px;
+  background: url("../../img/bg-pattern.png");
+  background-position-y: 0;
+  background-position-x: center;
+  background-repeat: repeat-x;
+
+  .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+.overview__title {
+  margin-bottom: 60px;
+}
+
+.overview__list {
+  max-width: 1160px;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 40px;
+}
+
+.overview__item {
+  position: relative;
+  background-color: $color-black-russian2;
+  border-radius: 30px;
+  padding: 60px;
+
+  &::before {
+    position: absolute;
+    content: "";
+    top: 60px;
+    left: 60px;
+    width: 80px;
+    height: 80px;
+  }
+
+  &:nth-child(1)::before  {
+    background: url("../../img/svg/icon-hat.svg") center no-repeat;
+  }
+
+  &:nth-child(2)::before  {
+    background: url("../../img/svg/icon-networking.svg") center no-repeat;
+  }
+
+  &:nth-child(3)::before  {
+    background: url("../../img/svg/icon-wine.svg") center no-repeat;
+  }
+
+  &:nth-child(4)::before  {
+    background: url("../../img/svg/icon-music.svg") center no-repeat;
+  }
+}
+
+.overview__item-title {
+  @include font-settings ($ff-nun, 700, 26px, 1.2);
+  color: $color-alice-blue;
+  margin-bottom: 20px;
+  padding-top: 100px;
+  letter-spacing: -1.8px;
+}
+
+.overview__item-text {
+  @include font-settings ($ff-nun, 400, 20px, 1.4);
+  color: $color-solitude2;
+  letter-spacing: -1.4px;
+}

@@ -17,14 +17,6 @@
   }
 }
 
-.rouble {
-  font-family: $ff-rouble;
-  /* stylelint-disable */
-  text-transform: lowercase !important;
-  font-weight: 400 !important;
-  /* stylelint-enable */
-}
-
 .visually-hidden {
   position: absolute;
 
@@ -68,4 +60,15 @@
 
 .js-focus-visible :focus:not(.focus-visible) {
   outline: none;
+}
+
+.list-reset {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.title {
+  @include font-settings ($ff-mon, 600, 44px, 1.2);
+  color: $color-alice-blue;
 }

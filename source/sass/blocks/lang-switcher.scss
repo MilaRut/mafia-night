@@ -1,0 +1,21 @@
+.lang-switcher__toggle {
+  background-color: $color-transparent;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0;
+  cursor: pointer;
+
+  span {
+    @include font-settings ($ff-nun, 600, 14px, 1);
+    color: $color-default-white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .icon-globe {
+    margin-right: 10px;
+  }
+}

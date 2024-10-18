@@ -1,0 +1,50 @@
+.signup {
+  background-color: $color-black-russian3;
+
+  .container {
+    background: url("../../img/signup-bg.png");
+    background-repeat: no-repeat;
+    background-position-x: center;
+    background-position-y: 0;
+    background-size: cover;
+    padding: 64px 0 105px;
+  }
+}
+
+.signup__content {
+  max-width: 1160px;
+  display: flex;
+  align-items: center;
+  gap: 60px;
+  margin: 0 auto;
+  padding-right: 66px;
+}
+
+.signup__text {
+  padding-top: 45px;
+}
+
+.signup__title {
+  margin-bottom: 40px;
+}
+
+.signup__description {
+  @include font-settings ($ff-nun, 400, 22px, 1.4);
+  color: $color-solitude;
+  margin-bottom: 50px;
+  letter-spacing: -1.4px;
+}
+
+.signup__image-mafia {
+  min-width: 434px;
+  width: 434px;
+  height: 400px;
+}
+
+.signup__image-bypocket {
+  min-width: 270px;
+  width: 270px;
+  height: 51px;
+  margin-top: -20px;
+  margin-left: 23px;
+}

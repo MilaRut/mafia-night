@@ -1,0 +1,20 @@
+.footer {
+  padding: 90px 0;
+  background-color: $color-black-russian3;
+
+  .container {
+    max-width: 1240px;
+  }
+}
+
+.footer__content {
+  display: flex;
+  gap: 20px;
+  align-items: center
+}
+
+.footer__copyright {
+  @include font-settings ($ff-nun, 400, 13px, 1);
+  color: $color-periwinkle;
+  letter-spacing: -0.7px;
+}
