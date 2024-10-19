@@ -33,7 +33,7 @@
 .lang-switcher__list {
   @include font-settings ($ff-nun, 400, 20px, 0);
   position: absolute;
-  top: 40px;
+  top: 90px;
   right: 50%;
   transform: translateX(50%);
   display: grid;
@@ -47,7 +47,7 @@
   transition: line-height 0.5s, color 0.5s;
 
   @include vp-640 {
-    top: 90px;
+    top: 40px;
     right: 0;
     transform: none;
   }

@@ -1372,7 +1372,7 @@ button,
   font-size: 20px;
   line-height: 0;
   position: absolute;
-  top: 40px;
+  top: 90px;
   right: 50%;
   -webkit-transform: translateX(50%);
   -ms-transform: translateX(50%);
@@ -1872,7 +1872,7 @@ button,
   }
 
   .lang-switcher__list {
-    top: 90px;
+    top: 40px;
     right: 0;
     -webkit-transform: none;
     -ms-transform: none;
