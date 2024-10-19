@@ -31,20 +31,20 @@
 }
 
 .lang-switcher__list {
-  @include font-settings ($ff-nun, 400, 20px, 0);
   position: absolute;
   top: 90px;
   right: 50%;
   transform: translateX(50%);
   display: grid;
-  margin-block-start: 0.5lh;
+  gap: 10px;
   background: rgba(255, 255, 255, 0.90);
   backdrop-filter: blur(0.75rem);
   border-radius: 20px;
   z-index: 1000;
-  overflow: hidden;
-  color: transparent;
-  transition: line-height 0.5s, color 0.5s;
+  max-height: 0;
+  opacity: 0;
+  padding: 18px;
+  transition: max-height $trans-default, opacity $trans-default;
 
   @include vp-640 {
     top: 40px;
@@ -53,8 +53,8 @@
   }
 
   &.is-active {
-    line-height: 1.2;
-    color: $color-black-russian;
+    max-height: 100px;
+    opacity: 1;
 
     .lang-switcher__item a {
       opacity: 1;
@@ -66,15 +66,16 @@
   overflow: hidden;
 
   a {
+    @include font-settings ($ff-nun, 400, 20px, 1);
     color: $color-black-russian;
-    transition: opacity $trans-default;
     display: block;
-    padding: 0.5lh 20px;
     opacity: 0;
-    transition: opacity $trans-default;
+    padding: 5px 10px;
+    border-radius: 7px;
+    transition: background-color $trans-default, opacity 0.5s ease;
 
     @include hover-focus {
-      opacity: 0.6;
+      background-color: $color-default-white;
     }
   }
 }

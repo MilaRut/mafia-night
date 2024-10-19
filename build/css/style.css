@@ -1366,11 +1366,6 @@ button,
 }
 
 .lang-switcher__list {
-  font-family: "NunitoSans", "Arial", sans-serif;
-  font-style: normal;
-  font-weight: 400;
-  font-size: 20px;
-  line-height: 0;
   position: absolute;
   top: 90px;
   right: 50%;
@@ -1379,22 +1374,22 @@ button,
   transform: translateX(50%);
   display: -ms-grid;
   display: grid;
-  -webkit-margin-before: 0.5lh;
-  margin-block-start: 0.5lh;
+  gap: 10px;
   background: rgba(255, 255, 255, 0.9);
   -webkit-backdrop-filter: blur(0.75rem);
   backdrop-filter: blur(0.75rem);
   border-radius: 20px;
   z-index: 1000;
-  overflow: hidden;
-  color: transparent;
-  -webkit-transition: line-height 0.5s, color 0.5s;
-  transition: line-height 0.5s, color 0.5s;
+  max-height: 0;
+  opacity: 0;
+  padding: 18px;
+  -webkit-transition: max-height 0.3s ease, opacity 0.3s ease;
+  transition: max-height 0.3s ease, opacity 0.3s ease;
 }
 
 .lang-switcher__list.is-active {
-  line-height: 1.2;
-  color: #010c22;
+  max-height: 100px;
+  opacity: 1;
 }
 
 .lang-switcher__list.is-active .lang-switcher__item a {
@@ -1406,17 +1401,22 @@ button,
 }
 
 .lang-switcher__item a {
+  font-family: "NunitoSans", "Arial", sans-serif;
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
   color: #010c22;
-  -webkit-transition: opacity 0.3s ease;
-  transition: opacity 0.3s ease;
   display: block;
-  padding: 0.5lh 20px;
   opacity: 0;
-  transition: opacity 0.3s ease;
+  padding: 5px 10px;
+  border-radius: 7px;
+  -webkit-transition: background-color 0.3s ease, opacity 0.5s ease;
+  transition: background-color 0.3s ease, opacity 0.5s ease;
 }
 
 .lang-switcher__item a.focus-visible:focus {
-  opacity: 0.6;
+  background-color: #ffffff;
 }
 
 .footer {
@@ -2448,6 +2448,6 @@ button,
   }
 
   .lang-switcher__item a:hover:not(.focus-visible) {
-    opacity: 0.6;
+    background-color: #ffffff;
   }
 }
