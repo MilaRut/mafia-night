@@ -64,7 +64,6 @@
 }
 
 .overview__item {
-  position: relative;
   background-color: $color-black-russian2;
   max-width: 340px;
   border-radius: 30px;
@@ -86,36 +85,18 @@
   @include vp-1200 {
     max-width: 570px;
   }
+}
 
-  &::before {
-    position: absolute;
-    content: "";
-    top: 40px;
-    left: 40px;
-    width: 80px;
-    height: 80px;
+.overview__icon {
+  display: block;
+  width: 80px;
+  height: 80px;
+  margin-bottom: 20px;
 
-    @include vp-640 {
-      top: 60px;
-      left: 60px;
-    }
-
-  }
-
-  &:nth-child(1)::before {
-    background: url("../../img/svg/icon-hat.svg") center no-repeat;
-  }
-
-  &:nth-child(2)::before {
-    background: url("../../img/svg/icon-networking.svg") center no-repeat;
-  }
-
-  &:nth-child(3)::before {
-    background: url("../../img/svg/icon-wine.svg") center no-repeat;
-  }
-
-  &:nth-child(4)::before {
-    background: url("../../img/svg/icon-music.svg") center no-repeat;
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain
   }
 }
 
@@ -123,7 +104,6 @@
   @include font-settings ($ff-nun, 700, 20px, 1.2);
   color: $color-alice-blue;
   margin-bottom: 20px;
-  padding-top: 100px;
   letter-spacing: -0.6px;
 
   @include vp-480 {

@@ -7,6 +7,16 @@
   padding: 0;
   cursor: pointer;
 
+  .icon-arrow {
+    transition: transform $trans-default;
+  }
+
+  &.is-active {
+    .icon-arrow {
+      transform: scale(1, -1);
+    }
+  }
+
   span {
     @include font-settings ($ff-nun, 600, 14px, 1);
     color: $color-default-white;
@@ -17,5 +27,39 @@
 
   .icon-globe {
     margin-right: 10px;
+  }
+}
+
+.lang-switcher__list {
+  position: absolute;
+  display: none;
+  flex-direction: column;
+  gap: 15px;
+  right: 50%;
+  transform: translateX(50%);
+  background: rgba(255, 255, 255, 0.90);
+  backdrop-filter: blur(0.75rem);
+  margin-top: 10px;
+  border-radius: 20px;
+  padding: 20px;
+  z-index: 1000;
+
+  @include vp-640 {
+    right: 0;
+    transform: none;
+  }
+
+  &.is-active {
+    display: flex;
+  }
+}
+
+.lang-switcher__item a {
+  @include font-settings ($ff-nun, 600, 20px, 1);
+  color: $color-black-russian;
+  transition: opacity $trans-default;
+
+  @include hover-focus {
+    opacity: 0.7;
   }
 }
