@@ -62,4 +62,4 @@ function setButtonText(lang) {
   });
 }
 
-export {loadLanguage};
+export {loadLanguage, setButtonText};

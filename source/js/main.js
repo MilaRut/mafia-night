@@ -1,6 +1,6 @@
 import {iosVhFix} from './utils/ios-vh-fix';
 import {initAnimations} from './modules/animations';
-import {loadLanguage} from './modules/localisation';
+import {loadLanguage, setButtonText} from './modules/localisation';
 import {showDropdownList} from './modules/dropdown';
 
 const savedLanguage = localStorage.getItem('maf-pa-lang') || 'ru';
@@ -14,6 +14,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   iosVhFix();
   loadLanguage(savedLanguage);
+  setButtonText(savedLanguage);
   showDropdownList();
 
   // Modules

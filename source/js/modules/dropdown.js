@@ -1,30 +1,32 @@
 const triggers = document.querySelectorAll('.js-dropdown-trigger');
 
+function removeClass(el1, el2) {
+  el1.classList.remove('is-active');
+  el2.classList.remove('is-active');
+}
+
 function showDropdownList() {
-  triggers.forEach((el) => {
-    let currentEl = el;
-    let dataId = currentEl.getAttribute('data-id');
+  triggers.forEach((trigger) => {
+    let currentTrigger = trigger;
+    let dataId = currentTrigger.getAttribute('data-id');
     let currentList = document.querySelector(dataId);
-    el.addEventListener('click', (e) => {
+    trigger.addEventListener('click', (e) => {
       e.preventDefault();
       if (!currentList.classList.contains('is-active')) {
         currentList.classList.add('is-active');
-        currentEl.classList.add('is-active');
+        currentTrigger.classList.add('is-active');
       } else {
-        currentList.classList.remove('is-active');
-        currentEl.classList.remove('is-active');
+        removeClass(currentList, currentTrigger);
       }
     });
     document.addEventListener('click', (e) => {
-      if (currentList.classList.contains('is-active') && e.target !== el && !el.contains(e.target)) {
-        currentList.classList.remove('is-active');
-        currentEl.classList.remove('is-active');
+      if (currentList.classList.contains('is-active') && e.target !== trigger && !trigger.contains(e.target)) {
+        removeClass(currentList, currentTrigger);
       }
     });
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape') {
-        currentList.classList.remove('is-active');
-        currentEl.classList.remove('is-active');
+        removeClass(currentList, currentTrigger);
       }
     });
   });
