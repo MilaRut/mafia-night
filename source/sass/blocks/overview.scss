@@ -1,10 +1,25 @@
 .overview {
-  padding-top: 116px;
-  padding-bottom: 162px;
+  padding: 80px 0;
   background: url("../../img/bg-pattern.png");
   background-position-y: 0;
   background-position-x: center;
   background-repeat: repeat-x;
+
+  @include vp-480 {
+    padding: 100px 0 110px;
+  }
+
+  @include vp-640 {
+    padding: 100px 0 133px;
+  }
+
+  @include vp-960 {
+    padding: 120px 0 150px;
+  }
+
+  @include vp-1200 {
+    padding: 116px 0 160px;
+  }
 
   .container {
     display: flex;
@@ -14,58 +29,143 @@
 }
 
 .overview__title {
-  margin-bottom: 60px;
+  margin-bottom: 50px;
+
+  @include vp-480 {
+    margin-bottom: 87px;
+  }
+
+  @include vp-640 {
+    margin-bottom: 60px;
+  }
+
+  @include vp-960 {
+    margin-bottom: 60px;
+  }
+
+  @include vp-1200 {
+    margin-bottom: 60px;
+  }
 }
 
 .overview__list {
   max-width: 1160px;
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
-  gap: 40px;
+  grid-template-columns: auto;
+  gap: 20px;
+
+  @include vp-960 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  @include vp-1200 {
+    gap: 40px;
+  }
 }
 
 .overview__item {
   position: relative;
   background-color: $color-black-russian2;
+  max-width: 340px;
   border-radius: 30px;
-  padding: 60px;
+  padding: 40px;
+
+  @include vp-480 {
+    max-width: 460px;
+  }
+
+  @include vp-640 {
+    max-width: 620px;
+    padding: 60px;
+  }
+
+  @include vp-960 {
+    max-width: 460px;
+  }
+
+  @include vp-1200 {
+    max-width: 570px;
+  }
 
   &::before {
     position: absolute;
     content: "";
-    top: 60px;
-    left: 60px;
+    top: 40px;
+    left: 40px;
     width: 80px;
     height: 80px;
+
+    @include vp-640 {
+      top: 60px;
+      left: 60px;
+    }
+
   }
 
-  &:nth-child(1)::before  {
+  &:nth-child(1)::before {
     background: url("../../img/svg/icon-hat.svg") center no-repeat;
   }
 
-  &:nth-child(2)::before  {
+  &:nth-child(2)::before {
     background: url("../../img/svg/icon-networking.svg") center no-repeat;
   }
 
-  &:nth-child(3)::before  {
+  &:nth-child(3)::before {
     background: url("../../img/svg/icon-wine.svg") center no-repeat;
   }
 
-  &:nth-child(4)::before  {
+  &:nth-child(4)::before {
     background: url("../../img/svg/icon-music.svg") center no-repeat;
   }
 }
 
 .overview__item-title {
-  @include font-settings ($ff-nun, 700, 26px, 1.2);
+  @include font-settings ($ff-nun, 700, 20px, 1.2);
   color: $color-alice-blue;
   margin-bottom: 20px;
   padding-top: 100px;
-  letter-spacing: -1.8px;
+  letter-spacing: -0.6px;
+
+  @include vp-480 {
+    font-size: 22px;
+  }
+
+  @include vp-960 {
+    font-size: 24px;
+    line-height: 1.2;
+    letter-spacing: -1.5px;
+  }
+
+  @include vp-1200 {
+    font-size: 26px;
+    letter-spacing: -0.8px;
+  }
 }
 
 .overview__item-text {
-  @include font-settings ($ff-nun, 400, 20px, 1.4);
+  @include font-settings ($ff-nun, 400, 15px, 1.4);
   color: $color-solitude2;
-  letter-spacing: -1.4px;
+  letter-spacing: -0.4px;
+
+  @include vp-480 {
+    font-size: 16px;
+    line-height: 1.37;
+  }
+
+  @include vp-640 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  @include vp-960 {
+    font-size: 18px;
+    line-height: 1.39;
+    letter-spacing: -0.5px;
+  }
+
+  @include vp-1200 {
+    font-size: 20px;
+    line-height: 1.4;
+    letter-spacing: -0.6px;
+  }
 }

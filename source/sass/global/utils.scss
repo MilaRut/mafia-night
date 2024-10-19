@@ -69,6 +69,24 @@
 }
 
 .title {
-  @include font-settings ($ff-mon, 600, 44px, 1.2);
+  @include font-settings ($ff-mon, 600, 22px, 1.2);
   color: $color-alice-blue;
+  margin-bottom: 30px;
+
+  @include vp-480 {
+    font-size: 26px;
+  }
+
+  @include vp-640 {
+    font-size: 32px;
+  }
+
+  @include vp-960 {
+    font-size: 36px;
+    margin-bottom: 40px;
+  }
+
+  @include vp-1200 {
+    font-size: 44px;
+  }
 }

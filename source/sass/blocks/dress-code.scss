@@ -1,50 +1,175 @@
 .dress-code {
   background-color: $color-black-russian3;
-  padding: 120px 0;
+  padding: 80px 0;
+
+  @include vp-480 {
+    padding: 90px 0 100px;
+  }
+
+  @include vp-640 {
+    padding: 70px 0 100px;
+  }
+
+  @include vp-960 {
+    padding: 120px 0;
+  }
 
   .container {
-    max-width: 1240px;
+    @include vp-1200 {
+      max-width: 1180px;
+    }
   }
 }
 
 .dress-code__title {
-  margin-bottom: 40px;
+  max-width: 300px;
+  margin: 0 auto 30px;
+
+  @include vp-480 {
+    max-width: 460px;
+  }
+
+  @include vp-640 {
+    max-width: 620px;
+  }
+
+  @include vp-960 {
+    max-width: 940px;
+  }
+
+  @include vp-1200 {
+    max-width: 1160px;
+  }
 }
 
 .dress-code__description {
-  @include font-settings ($ff-nun, 400, 22px, 1.4);
-  margin-bottom: 128px;
+  @include font-settings ($ff-nun, 400, 16px, 1.38);
   color: $color-solitude;
-  letter-spacing: -1.3px;
+  letter-spacing: -0.4px;
+  max-width: 300px;
+  margin: 0 auto 417px;
+
+  @include vp-480 {
+    max-width: 460px;
+    font-size: 17px;
+    line-height: 1.4;
+    letter-spacing: -0.5px;
+    margin-bottom: 454px;
+  }
+
+  @include vp-640 {
+    max-width: 620px;
+    font-size: 18px;
+    line-height: 1.37;
+    margin-bottom: 466px;
+  }
+
+  @include vp-960 {
+    max-width: 940px;
+    font-size: 20px;
+    margin-bottom: 118px;
+  }
+
+  @include vp-1200 {
+    max-width: 1160px;
+    font-size: 22px;
+    line-height: 1.42;
+    margin-bottom: 128px;
+    letter-spacing: -0.6px;
+  }
 
   &:last-of-type {
     margin-bottom: 0;
+
+    @include vp-640 {
+      letter-spacing: -1px;
+    }
+
+    @include vp-960 {
+      letter-spacing: 0.5px;
+      line-height: 1.55;
+    }
+
+    @include vp-1200 {
+      line-height: 1.45;
+      letter-spacing: -0.6px;
+    }
   }
 }
 
 .dress-code__list {
   display: flex;
   flex-direction: column;
-  gap: 70px;
-  margin-bottom: 100px;
+  align-items: center;
+  gap: 424px;
+  margin-bottom: 47px;
+
+  @include vp-480 {
+    gap: 442px;
+    margin-bottom: 61px;
+  }
+
+  @include vp-640 {
+    gap: 405px;
+    margin-bottom: 61px;
+  }
+
+  @include vp-480 {
+    gap: 442px;
+    margin-bottom: 61px;
+  }
+
+  @include vp-960 {
+    gap: 60px;
+    margin-bottom: 80px;
+  }
+
+  @include vp-1200 {
+    align-items: flex-start;
+    gap: 70px;
+    margin-bottom: 100px;
+  }
 }
 
 .dress-code__item {
   position: relative;
-  border: 2px solid #465989;
-  border-radius: 30px;
   width: 100%;
-  max-width: 964px;
-  height: 392px;
-  padding: 58px;
+  max-width: 340px;
   display: flex;
   align-items: center;
+  border: 2px solid #465989;
+  border-radius: 30px;
+  padding: 38px;
+
+  @include vp-480 {
+    max-width: 460px;
+  }
+
+  @include vp-640 {
+    max-width: 620px;
+    height: 286px;
+    padding: 58px;
+  }
+
+  @include vp-960 {
+    max-width: 940px;
+    height: 392px;
+  }
+
+  @include vp-1200 {
+    max-width: 964px;
+  }
 
   &--women {
-    margin-left: auto;
+    @include vp-1200 {
+      margin-left: auto;
+    }
 
     .dress-code__image {
-      right: 0;
+      @include vp-960 {
+        right: -181px;
+        left: auto;
+      }
     }
   }
 
@@ -52,29 +177,84 @@
     justify-content: flex-end;
 
     .dress-code__image {
-      left: 0;
+      @include vp-960 {
+        left: 0;
+        transform: none;
+      }
     }
   }
 }
 
 .dress-code__image {
   position: absolute;
-  bottom: 0;
+  width: 298px;
+  height: 388px;
+  top: -390px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  @include vp-960 {
+    width: 360px;
+    height: 468px;
+    bottom: 0;
+    top: auto;
+  }
 }
 
 .dress-code__text {
-  max-width: 52.7%;
+  @include vp-960 {
+    max-width: 58.4%;
+  }
+
+  @include vp-1200 {
+    max-width: 52.7%;
+  }
 }
 
 .dress-code__item-title {
-  @include font-settings ($ff-nun, 700, 26px, 1.2);
+  @include font-settings ($ff-nun, 700, 20px, 1.2);
   color: $color-alice-blue;
-  letter-spacing: -1.8px;
-  margin-bottom: 20px;
+  letter-spacing: -0.6px;
+  margin-bottom: 23px;
+
+  @include vp-480 {
+    font-size: 22px;
+    margin-bottom: 20px;
+  }
+
+  @include vp-960 {
+    font-size: 24px;
+  }
+
+  @include vp-1200 {
+    font-size: 26px;
+    letter-spacing: -0.7px;
+  }
 }
 
 .dress-code__item-text {
-  @include font-settings ($ff-nun, 400, 20px, 1.4);
+  @include font-settings ($ff-nun, 400, 15px, 1.4);
   color: $color-solitude2;
-  letter-spacing: -1.2px;
+  letter-spacing: -0.4px;
+
+  @include vp-480 {
+    font-size: 16px;
+    line-height: 1.38;
+  }
+
+  @include vp-640 {
+    font-size: 17px;
+    line-height: 1.4;
+  }
+
+  @include vp-960 {
+    font-size: 18px;
+    line-height: 1.38;
+    letter-spacing: -0.5px;
+  }
+
+  @include vp-1200 {
+    font-size: 20px;
+    letter-spacing: -0.5px;
+  }
 }

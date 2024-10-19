@@ -1,50 +1,212 @@
 .signup {
+  position: relative;
   background-color: $color-black-russian3;
+  padding: 80px 0;
+
+  @include vp-480 {
+    padding: 102px 0;
+  }
+
+  @include vp-640 {
+    padding: 100px 0;
+  }
+
+  @include vp-960 {
+    padding: 100px 0;
+  }
+
+  @include vp-1200 {
+    padding: 64px 0 100px;
+  }
 
   .container {
-    background: url("../../img/signup-bg.png");
-    background-repeat: no-repeat;
-    background-position-x: center;
-    background-position-y: 0;
-    background-size: cover;
-    padding: 64px 0 105px;
+    position: relative;
+    z-index: 10;
+
+    @include vp-960 {
+      max-width: 960px;
+    }
+
+    @include vp-1200 {
+      max-width: 1180px;
+    }
+  }
+
+  img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
   }
 }
 
 .signup__content {
   max-width: 1160px;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 60px;
+  max-width: 300px;
+  gap: 52px;
   margin: 0 auto;
-  padding-right: 66px;
+
+  @include vp-480 {
+    max-width: 480px;
+    padding: 0 10px;
+    gap: 65px;
+  }
+
+  @include vp-640 {
+    max-width: 640px;
+    gap: 70px;
+  }
+
+  @include vp-960 {
+    max-width: 960px;
+    flex-direction: row;
+    padding: 0;
+    gap: 0;
+  }
+
+  @include vp-1200 {
+    max-width: 1180px;
+    flex-direction: row;
+    padding-right: 66px;
+  }
 }
 
 .signup__text {
-  padding-top: 45px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  @include vp-640 {
+    align-items: flex-start;
+  }
+
+  @include vp-960 {
+    padding-top: 18px;
+  }
+
+  @include vp-1200 {
+    padding-top: 34px;
+  }
 }
 
 .signup__title {
-  margin-bottom: 40px;
+  text-align: center;
 }
 
 .signup__description {
-  @include font-settings ($ff-nun, 400, 22px, 1.4);
+  @include font-settings ($ff-nun, 400, 16px, 1.38);
   color: $color-solitude;
-  margin-bottom: 50px;
-  letter-spacing: -1.4px;
+  letter-spacing: -0.7px;
+  margin-bottom: 40px;
+
+  @include vp-480 {
+    font-size: 17px;
+    line-height: 1.41;
+    letter-spacing: -0.4px;
+  }
+
+  @include vp-640 {
+    max-width: 86%;
+    font-size: 18px;
+    line-height: 1.38;
+    letter-spacing: -0.64px;
+  }
+
+  @include vp-960 {
+    max-width: 93%;
+    font-size: 22px;
+    line-height: 1.42;
+    letter-spacing: -0.6px;
+    margin-bottom: 60px;
+  }
+
+  @include vp-1200 {
+    max-width: 84%;
+    font-size: 22px;
+    line-height: 1.4;
+    margin-bottom: 48px;
+  }
 }
 
 .signup__image-mafia {
-  min-width: 434px;
-  width: 434px;
-  height: 400px;
+  width: 251px;
+  height: 233px;
+
+  @include vp-480 {
+    width: 302px;
+    height: 280px;
+  }
+
+  @include vp-960 {
+    min-width: 360px;
+    width: 360px;
+    height: 333px;
+  }
+
+  @include vp-1200 {
+    min-width: 434px;
+    width: 434px;
+    height: 400px;
+  }
 }
 
 .signup__image-bypocket {
-  min-width: 270px;
-  width: 270px;
-  height: 51px;
-  margin-top: -20px;
-  margin-left: 23px;
+  width: 158px;
+  height: 30px;
+  margin: -14px 0 0 11px;
+
+  @include vp-480 {
+    width: 189px;
+    height: 35px;
+    margin: -16px 0 0 16px;
+  }
+
+  @include vp-960 {
+    width: 225px;
+    height: 42px;
+    margin: -19px 0 0 18px;
+  }
+
+  @include vp-1200 {
+    min-width: 270px;
+    width: 302px;
+    height: 57px;
+    margin: -20px 0 0 23px;
+  }
+}
+
+.signup__image-city {
+  position: absolute;
+  bottom: -6px;
+  left: 50%;
+  bottom: -6px;
+  transform: translateX(-441px);
+  width: 814px;
+  height: 458px;
+  pointer-events: none;
+  z-index: 1;
+
+  @include vp-480 {
+    width: 1015px;
+    height: 571px;
+    bottom: 12px;
+    transform: translateX(-581px);
+  }
+
+  @include vp-640 {
+    bottom: 30px;
+    transform: translateX(-522px);
+  }
+
+  @include vp-960 {
+    bottom: -20px;
+    transform: translateX(-330px);
+  }
+
+  @include vp-1200 {
+    bottom: 0;
+    transform: translateX(-194px);
+  }
 }
