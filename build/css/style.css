@@ -1872,6 +1872,7 @@ button,
   }
 
   .lang-switcher__list {
+    top: 90px;
     right: 0;
     -webkit-transform: none;
     -ms-transform: none;
