@@ -8,6 +8,15 @@
   <meta name="description" data-translate="description"
     content="Приглашаем вас 12 ноября в 19:00 в один из лучших панорамных ресторанов Мальты на уникальное мероприятие “Mafia Night by PocketAffiliate”. Погрузитесь в атмосферу загадочности и гламура 1920-х годов вместе с топовыми профессионалами индустрии. Вас ждет живая музыка, изысканные закуски и незабываемый вечер нетворкинга в стиле мафии.">
   <title data-translate="title">Mafia Night by PocketAffiliate – Вечер в стиле 1920-х на Мальте</title>
+
+  <link rel="preload" href="./fonts/NunitoSans-Regular.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/NunitoSans-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff2" type="font/woff2" as="font" crossorigin="anonymous">
+
+  <link rel="preload" href="./fonts/NunitoSans-Regular.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/NunitoSans-SemiBold.woff" type="font/woff" as="font" crossorigin="anonymous">
+  <link rel="preload" href="./fonts/Montserrat-SemiBold.woff" type="font/woff" as="font" crossorigin="anonymous">
+
   <link rel="stylesheet" href="css/style.min.css?v=1910242116">
 </head>
 
@@ -51,26 +60,38 @@
         <div class="container">
           <div class="intro__titles">
             <div class="intro__image-mafia">
-              <img src="./img/mafia-night.png" width="562" height="518" alt="Mafia night." data-anim
-                data-anim-name="fade-in-up" data-anim-del="0.1">
+              <picture>
+                <source type="image/webp" srcset="./img/mafia-night.webp 1x, ./img/mafia-night@2x.webp 2x">
+                <img src="./img/mafia-night.png" srcset="./img/mafia-night@2x.png 2x" width="562" height="518"
+                  alt="Mafia night." data-anim data-anim-name="fade-in-up" data-anim-del="0.1">
+              </picture>
             </div>
             <div class="intro__image-bypocket">
-              <img src="./img/by-pocket.png" width="349" height="66" alt="By Pocket Affiliate." data-anim
-                data-anim-name="fade-in-up" data-anim-del="0.2">
+              <picture>
+                <source type="image/webp" srcset="./img/by-pocket.webp 1x, ./img/by-pocket@2x.webp 2x">
+                <img src="./img/by-pocket.png" srcset="./img/by-pocket@2x.png 2x" width="349" height="66"
+                  alt="By Pocket Affiliate." data-anim data-anim-name="fade-in-up" data-anim-del="0.2">
+              </picture>
             </div>
           </div>
         </div>
         <div class="intro__image-man">
-          <img src="./img/intro-man.png" width="852" height="739" alt="" data-anim data-anim-name="fade-in-left"
-            data-anim-del="0.2">
+          <picture>
+            <source type="image/webp" srcset="./img/intro-man.webp 1x, ./img/intro-man@2x.webp 2x">
+            <img src="./img/intro-man.png" srcset="./img/intro-man@2x.png 2x" width="852" height="739" alt="" data-anim
+              data-anim-name="fade-in-left" data-anim-del="0.2">
+          </picture>
         </div>
         <div class="intro__image-blur">
           <img src="./img/intro-blur.png" width="1187" height="1316" alt="" data-anim data-anim-name="fade-in"
             data-anim-del="0.3">
         </div>
         <div class="intro__image-city">
-          <img src="./img/intro-city.png" width="1244" height="828" alt="" data-anim data-anim-name="fade-in-up"
-            data-anim-del="0.3">
+          <picture>
+            <source type="image/webp" srcset="./img/intro-city.webp 1x, ./img/intro-city@2x.webp 2x">
+            <img src="./img/intro-city.png" srcset="./img/partners/intro-city@2x.png 2x" width="1244" height="828"
+              alt="" data-anim data-anim-name="fade-in-up" data-anim-del="0.3">
+          </picture>
         </div>
       </section>
       <section class="info">
@@ -84,11 +105,10 @@
               </p>
             </div>
             <p class="info__description" data-anim data-anim-name="fade-in-up" data-anim-del="0.2">
-              <span data-translate="info__description_1">
-                в&nbsp;одном из&nbsp;лучших панорамных ресторанов Мальты мы&nbsp;ждем вас
-                на&nbsp;уникальном мероприятии
-              </span>
-              <b><i><span data-translate="info__description_2">«Мафия by PocketAffiliate»</span></i></b>
+              <span data-translate="info__description_1"> в&nbsp;одном из&nbsp;лучших панорамных ресторанов Мальты
+                мы&nbsp;ждем вас на&nbsp;уникальном мероприятии
+              </span>&nbsp;
+              <b><i><span data-translate="info__description_2">«Мафия by PocketAffiliate»</span></i></b>&nbsp;
               <span data-translate="info__description_3">, где топ-профессионалы индустрии соберутся вместе, чтобы
                 окунуться в&nbsp;мир мафии 1920-х годов. Проведите время в&nbsp;атмосфере загадочности и&nbsp;старого
                 гламура, общаясь и
@@ -111,7 +131,9 @@
           <ul class="overview__list list-reset">
             <li class="overview__item" data-anim data-anim-name="fade-in-up" data-anim-del="0.1">
               <span class="overview__icon" data-anim data-anim-name="fade-in-up" data-anim-del="0.2">
-                <img src="./img/svg/icon-hat.svg" width="80" height="80" alt="">
+                <svg width="80" height="80" fill="currentColor">
+                  <use xlink:href="./img/sprite.svg#icon-hat"></use>
+                </svg>
               </span>
               <h3 class="overview__item-title" data-anim data-anim-name="fade-in-up" data-anim-del="0.3"
                 data-translate="overview__item_title_1">Эксклюзивная
@@ -125,7 +147,9 @@
             </li>
             <li class="overview__item" data-anim data-anim-name="fade-in-up" data-anim-del="0.2">
               <span class="overview__icon" data-anim data-anim-name="fade-in-up" data-anim-del="0.3">
-                <img src="./img/svg/icon-networking.svg" width="80" height="80" alt="">
+                <svg width="80" height="80" fill="currentColor">
+                  <use xlink:href="./img/sprite.svg#icon-networking"></use>
+                </svg>
               </span>
               <h3 class="overview__item-title" data-anim data-anim-name="fade-in-up" data-anim-del="0.4"
                 data-translate="overview__item_title_2">Нетворкинг
@@ -138,7 +162,9 @@
             </li>
             <li class="overview__item" data-anim data-anim-name="fade-in-up" data-anim-del="0.1">
               <span class="overview__icon" data-anim data-anim-name="fade-in-up" data-anim-del="0.2">
-                <img src="./img/svg/icon-wine.svg" width="80" height="80" alt="">
+                <svg width="80" height="80" fill="currentColor">
+                  <use xlink:href="./img/sprite.svg#icon-wine"></use>
+                </svg>
               </span>
               <h3 class="overview__item-title" data-anim data-anim-name="fade-in-up" data-anim-del="0.3"
                 data-translate="overview__item_title_3">Изысканные
@@ -150,7 +176,9 @@
             </li>
             <li class="overview__item" data-anim data-anim-name="fade-in-up" data-anim-del="0.2">
               <span class="overview__icon" data-anim data-anim-name="fade-in-up" data-anim-del="0.3">
-                <img src="./img/svg/icon-music.svg" width="80" height="80" alt="">
+                <svg width="80" height="80" fill="currentColor">
+                  <use xlink:href="./img/sprite.svg#icon-music"></use>
+                </svg>
               </span>
               <h3 class="overview__item-title" data-anim data-anim-name="fade-in-up" data-anim-del="0.4"
                 data-translate="overview__item_title_4">Живая музыка
@@ -178,8 +206,11 @@
             <li class="dress-code__item dress-code__item--men" data-anim data-anim-name="fade-in-left"
               data-anim-del="0.1">
               <div class="dress-code__image">
-                <img src="./img/dress-man.png" width="360" height="468" alt="Dress code for men." data-anim
-                  data-anim-name="fade-in-left" data-anim-del="0.2">
+                <picture>
+                  <source type="image/webp" srcset="./img/dress-man.webp 1x, ./img/dress-man@2x.webp 2x">
+                  <img src="./img/dress-man.png" srcset="./img/dress-man@2x.png 2x" width="360" height="468"
+                    alt="Dress code for men." data-anim data-anim-name="fade-in-left" data-anim-del="0.2">
+                </picture>
               </div>
               <div class="dress-code__text">
                 <h3 class="dress-code__item-title" data-anim data-anim-name="fade-in-left" data-anim-del="0.3"
@@ -193,8 +224,11 @@
             <li class="dress-code__item dress-code__item--women" data-anim data-anim-name="fade-in-right"
               data-anim-del="0.1">
               <div class="dress-code__image">
-                <img src="./img/dress-woman.png" width="360" height="468" alt="Dress code for women." data-anim
-                  data-anim-name="fade-in-right" data-anim-del="0.2">
+                <picture>
+                  <source type="image/webp" srcset="./img/dress-woman.webp 1x, ./img/dress-woman@2x.webp 2x">
+                  <img src="./img/dress-woman.png" srcset="./img/dress-woman@2x.png 2x" width="360" height="468"
+                    alt="Dress code for women." data-anim data-anim-name="fade-in-right" data-anim-del="0.2">
+                </picture>
               </div>
               <div class="dress-code__text">
                 <h3 class="dress-code__item-title" data-anim data-anim-name="fade-in-right" data-anim-del="0.3"
@@ -241,9 +275,9 @@
               <h2 class="signup__title title" data-anim data-anim-name="fade-in-left" data-anim-del="0.1"
                 data-translate="signup__title">Как попасть</h2>
               <p class="signup__description" data-anim data-anim-name="fade-in-left" data-anim-del="0.2">
-                <span data-translate="signup__description1">Для участия в </span>
-                <b><i><span data-translate="info__description_2">«Мафия by PocketAffiliate»</span></i></b>
-                <span data-translate="signup__description2"> 12&nbsp;ноября на&nbsp;Мальте необходимо
+                <span data-translate="signup__description1">Для участия в</span>&nbsp;
+                <b><i><span data-translate="info__description_2">«Мафия by PocketAffiliate»</span></i></b>&nbsp;
+                <span data-translate="signup__description2">12&nbsp;ноября на&nbsp;Мальте необходимо
                   заполнить анкету по&nbsp;ссылке ниже. После проверки анкеты вам будет выслано персональное
                   приглашение. Обратите внимание, что количество мест ограничено.</span>
               </p>
@@ -256,19 +290,28 @@
             </div>
             <div class="signup__images">
               <div class="signup__image-mafia">
-                <img src="./img/mafia-night.png" width="562" height="518" alt="Mafia night." data-anim
-                  data-anim-name="fade-in-up" data-anim-del="0.2">
+                <picture>
+                  <source type="image/webp" srcset="./img/mafia-night.webp 1x, ./img/mafia-night@2x.webp 2x">
+                  <img src="./img/mafia-night.png" srcset="./img/mafia-night@2x.png 2x" width="562" height="518"
+                    alt="Mafia night." data-anim data-anim-name="fade-in-up" data-anim-del="0.2">
+                </picture>
               </div>
               <div class="signup__image-bypocket">
-                <img src="./img/by-pocket.png" width="349" height="66" alt="By Pocket Affiliate." data-anim
-                  data-anim-name="fade-in-up" data-anim-del="0.3">
+                <picture>
+                  <source type="image/webp" srcset="./img/by-pocket.webp 1x, ./img/by-pocket@2x.webp 2x">
+                  <img src="./img/by-pocket.png" srcset="./img/by-pocket@2x.png 2x" width="349" height="66"
+                    alt="By Pocket Affiliate." data-anim data-anim-name="fade-in-up" data-anim-del="0.3">
+                </picture>
               </div>
             </div>
           </div>
         </div>
         <div class="signup__image-city">
-          <img src="./img/signup-bg.png" width="1015" height="571" alt="" data-anim data-anim-name="fade-in-up"
-            data-anim-del="0.4">
+          <picture>
+            <source type="image/webp" srcset="./img/signup-bg.webp 1x, ./img/signup-bg@2x.webp 2x">
+            <img src="./img/signup-bg.png" srcset="./img/signup-bg@2x.png 2x" width="1015" height="571" alt="" data-anim
+              data-anim-name="fade-in-up" data-anim-del="0.4">
+          </picture>
         </div>
       </section>
     </main>
