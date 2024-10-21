@@ -397,7 +397,7 @@ template {
   font-weight: 600;
   font-family: "NunitoSans";
   font-display: swap;
-  src: url("../fonts/NunitoSans-Semibold.woff2") format("woff2"), url("../fonts/NunitoSans-Semibold.woff") format("woff");
+  src: url("../fonts/NunitoSans-SemiBold.woff2") format("woff2"), url("../fonts/NunitoSans-SemiBold.woff") format("woff");
 }
 
 @font-face {
@@ -413,7 +413,7 @@ template {
   font-weight: 600;
   font-family: "Montserrat";
   font-display: swap;
-  src: url("../fonts/Montserrat-Semibold.woff2") format("woff2"), url("../fonts/Montserrat-Semibold.woff") format("woff");
+  src: url("../fonts/Montserrat-SemiBold.woff2") format("woff2"), url("../fonts/Montserrat-SemiBold.woff") format("woff");
 }
 
 @font-face {
